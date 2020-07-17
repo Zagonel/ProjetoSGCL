@@ -103,15 +103,17 @@ public class FXMLBuscaUsuarioController implements Initializable {
 
     @FXML
     private void iniciaTable() {
-        colunaUser.setCellValueFactory(new PropertyValueFactory<>("usuario"));
-        colunaNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
-        colunaDepartamento.setCellValueFactory(new PropertyValueFactory<>("departamento"));
-        colunaAfiliacao.setCellValueFactory(new PropertyValueFactory<>("afiliação"));
-        colunaCpf.setCellValueFactory(new PropertyValueFactory<>("cpf"));
-        colunaCargo.setCellValueFactory(new PropertyValueFactory<>("cargo"));
-        colunaCargaHoraria.setCellValueFactory(new PropertyValueFactory<>("carga_horaria"));
+
+        colunaUser.setCellValueFactory(new PropertyValueFactory<>("user"));
+        colunaNome.setCellValueFactory(new PropertyValueFactory<>("Nome"));
+        colunaCpf.setCellValueFactory(new PropertyValueFactory<>("CPF"));
+        colunaAfiliacao.setCellValueFactory(new PropertyValueFactory<>("Afiliacao"));
+        colunaDepartamento.setCellValueFactory(new PropertyValueFactory<>("Departamento"));
+        colunaCargo.setCellValueFactory(new PropertyValueFactory<>("Cargo"));
+        colunaCargaHoraria.setCellValueFactory(new PropertyValueFactory<>("cargaHoraria"));
 
         infoTable.setItems(BuscarInfoDAO.registroUsuarios());
+
     }
 
     @Override

@@ -10,8 +10,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.collections.FXCollections;
@@ -43,11 +41,10 @@ public class BuscarInfoDAO {
                 userCadastrado.setCPF(rs.getString("cpf"));
                 userCadastrado.setAfiliacao(rs.getString("afiliação"));
                 userCadastrado.setDepartamento(rs.getString("departamento"));
-                userCadastrado.setCargaHoraria(rs.getInt("carga_horaria"));               
-                
+                userCadastrado.setCargo(rs.getString("cargo"));
+                userCadastrado.setCargaHoraria(rs.getInt("carga_horaria"));
+
                 usuarios.add(userCadastrado);
-                
-                System.out.println(userCadastrado.getUser() + "" + userCadastrado.getCargo());
 
             }
         } catch (SQLException ex) {

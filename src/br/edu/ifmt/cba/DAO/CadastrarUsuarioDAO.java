@@ -29,17 +29,20 @@ public class CadastrarUsuarioDAO {
                 return ("Preencha todos os dados!!!");
             } else {
 
-                stmt = con.prepareStatement("INSERT INTO Cadastro (usuario,senha,privilegio,nome,cpf,afiliação,departamento,carga_horaria) VALUES (?,?,?,?,?,?,?,?)");
+                stmt = con.prepareStatement("INSERT INTO Cadastro (usuario,senha,privilegio,nome,cpf,afiliação,departamento,carga_horaria,cargo) VALUES (?,?,?,?,?,?,?,?,?)");
                 stmt.setString(1, novoUser.getUser());
                 stmt.setString(2, novoUser.getPass());
                 if (novoUser.getCargo().equals("Professor")) {
                     stmt.setInt(3, 1);
+                    stmt.setString(9, "Professor");
                 }
                 if (novoUser.getCargo().equals("Tecnico")) {
                     stmt.setInt(3, 2);
+                    stmt.setString(9, "Tecnico");
                 }
                 if (novoUser.getCargo().equals("Gestor")) {
                     stmt.setInt(3, 3);
+                    stmt.setString(9, "Gestor");
                 }
                 stmt.setString(4, novoUser.getNome());
                 stmt.setString(5, novoUser.getCPF());

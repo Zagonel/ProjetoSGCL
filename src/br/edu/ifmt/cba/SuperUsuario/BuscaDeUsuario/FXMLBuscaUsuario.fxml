@@ -25,13 +25,13 @@
       </Button>
       <TableView fx:id="infoTable" layoutX="12.0" layoutY="70.0" prefHeight="200.0" prefWidth="776.0" style="-fx-border-color: black;">
         <columns>
-            <TableColumn fx:id="colunaUser" editable="false" prefWidth="125.0" sortable="false" text="Usuário" />
-            <TableColumn fx:id="colunaNome" editable="false" prefWidth="200.0" sortable="false" text="Nome" />
-          <TableColumn fx:id="colunaCpf" editable="false" prefWidth="100.0" sortable="false" text="CPF" />
-          <TableColumn fx:id="colunaAfiliacao" editable="false" prefWidth="75.0" sortable="false" text="Afiliacao" />
-            <TableColumn fx:id="colunaDepartamento" editable="false" prefWidth="100.0" sortable="false" text="Departamento" />
-            <TableColumn fx:id="colunaCargo" editable="false" prefWidth="75.0" sortable="false" text="Cargo" />
-            <TableColumn fx:id="colunaCargaHoraria" editable="false" prefWidth="100.0" sortable="false" text="Carga horária" />
+            <TableColumn fx:id="colunaUser" editable="false" prefWidth="125.0" text="Usuário" />
+            <TableColumn fx:id="colunaNome" editable="false" prefWidth="200.0" text="Nome" />
+          <TableColumn fx:id="colunaCpf" editable="false" prefWidth="100.0" text="CPF" />
+          <TableColumn fx:id="colunaAfiliacao" editable="false" prefWidth="75.0" text="Afiliacao" />
+            <TableColumn fx:id="colunaDepartamento" editable="false" prefWidth="100.0" text="Departamento" />
+            <TableColumn fx:id="colunaCargo" editable="false" prefWidth="75.0" text="Cargo" />
+            <TableColumn fx:id="colunaCargaHoraria" editable="false" prefWidth="100.0" text="Carga horária" />
         </columns>
       </TableView>
    </children>
