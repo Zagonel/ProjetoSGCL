@@ -5,7 +5,9 @@
  */
 package br.edu.ifmt.cba.SuperUsuario.BuscaDeUsuario;
 
+import br.edu.ifmt.cba.DAO.BuscarInfoDAO;
 import br.edu.ifmt.cba.Login.FXMLLoginController;
+import br.edu.ifmt.cba.Main.usuario;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -21,9 +23,9 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 /**
@@ -32,8 +34,6 @@ import javafx.stage.Stage;
  * @author igor_
  */
 public class FXMLBuscaUsuarioController implements Initializable {
-
-    public static final ObservableList names = FXCollections.observableArrayList();
 
     @FXML
     private Button btn_minimizer;
@@ -45,28 +45,28 @@ public class FXMLBuscaUsuarioController implements Initializable {
     private Button btn_voltar;
 
     @FXML
-    private TableView<?> infoTable;
+    private TableView<usuario> infoTable;
 
     @FXML
-    private TableColumn<?, ?> colunaUser;
+    private TableColumn<usuario, String> colunaUser;
 
     @FXML
-    private TableColumn<?, ?> colunaNome;
+    private TableColumn<usuario, String> colunaNome;
 
     @FXML
-    private TableColumn<?, ?> colunaCpf;
+    private TableColumn<usuario, String> colunaCpf;
 
     @FXML
-    private TableColumn<?, ?> colunaAfiliacao;
+    private TableColumn<usuario, String> colunaAfiliacao;
 
     @FXML
-    private TableColumn<?, ?> colunaDepartamento;
+    private TableColumn<usuario, String> colunaDepartamento;
 
     @FXML
-    private TableColumn<?, ?> colunaCargo;
+    private TableColumn<usuario, String> colunaCargo;
 
     @FXML
-    private TableColumn<?, ?> colunaCargaHoraria;
+    private TableColumn<usuario, String> colunaCargaHoraria;
 
     @FXML
     void voltarPaginaPrincipal(ActionEvent event) {
@@ -103,8 +103,15 @@ public class FXMLBuscaUsuarioController implements Initializable {
 
     @FXML
     private void iniciaTable() {
-        
-        
+        colunaUser.setCellValueFactory(new PropertyValueFactory<>("usuario"));
+        colunaNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
+        colunaDepartamento.setCellValueFactory(new PropertyValueFactory<>("departamento"));
+        colunaAfiliacao.setCellValueFactory(new PropertyValueFactory<>("afiliação"));
+        colunaCpf.setCellValueFactory(new PropertyValueFactory<>("cpf"));
+        colunaCargo.setCellValueFactory(new PropertyValueFactory<>("cargo"));
+        colunaCargaHoraria.setCellValueFactory(new PropertyValueFactory<>("carga_horaria"));
+
+        infoTable.setItems(BuscarInfoDAO.registroUsuarios());
     }
 
     @Override

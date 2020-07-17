@@ -6,7 +6,7 @@
 package br.edu.ifmt.cba.DAO;
 
 import br.edu.ifmt.cba.SuperUsuario.CadastroDeUsuarios.FXMLCadastroUsuarioController;
-import br.edu.ifmt.cba.SuperUsuario.CadastroDeUsuarios.FXMLCadastroUsuarioController.usuario;
+import br.edu.ifmt.cba.Main.usuario;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
