@@ -22,13 +22,13 @@ public class Horista extends Funcionario {
     }
 
     public void calculaSalario(double salario, int horasTrabalhadas) {
-        double aux = (salario * horasTrabalhadas / salario);
+        double aux = (salario + (horasTrabalhadas * 5));
         super.calculaSalario(aux);
     }
 
     @Override
     public String toString() {
-        return "Horista{" + "horasTrabalhadas=" + horasTrabalhadas + '}';
+        return "Horista{" + "horasTrabalhadas = " + horasTrabalhadas + " nome=" + super.getNome() + ", cpf=" + getCpf() + ", salario=" + getSalario() + ", id=" + getId() + '}';
     }
 
 }

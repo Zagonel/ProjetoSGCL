@@ -10,14 +10,23 @@ public class Home {
     //limitado para 5 funcionarios
     public static Funcionario funcionariosCadastrados[] = new Funcionario[5];
 
-    public static int menuprincipal() {
+    public static void menuprincipal() {
         System.out.println("|--------------------Menu-----------------------|");
         System.out.println("1 - Cadastrar");
         System.out.println("2 - Pesquisar");
         System.out.println("3 - Sair \n");
 
         int opcao = Teclado.leInt("Digite uma opção : ");
-        return opcao;
+        switch (opcao) {
+            case 1:
+                cadastrarFuncionario();
+                break;
+            case 2:
+                buscaFuncionario();
+                break;
+            case 3:
+                System.exit(0);
+        }
     }
 
     public static void cadastrarFuncionario() {
@@ -45,12 +54,15 @@ public class Home {
                 f1.setHorasTrabalhadas(aux);
                 f1.calculaSalario(aux2, aux);
 
+                System.out.println(f1);
                 for (int i = 0; i < 5; i++) {
                     if (funcionariosCadastrados[i] == null) {
                         funcionariosCadastrados[i] = f1;
-                        menuprincipal();
+                        System.out.println("dentro do laço" + funcionariosCadastrados[i]);
+                        break;
                     }
                 }
+                menuprincipal();
                 break;
 
             case 2:
@@ -72,9 +84,10 @@ public class Home {
                 for (int i = 0; i < 5; i++) {
                     if (funcionariosCadastrados[i] == null) {
                         funcionariosCadastrados[i] = f2;
-                        menuprincipal();
+                        break;
                     }
                 }
+                menuprincipal();
                 break;
             case 3:
                 menuprincipal();
@@ -92,6 +105,7 @@ public class Home {
         System.out.println("--------------------Pesquisar-----------------------");
         System.out.println("1 - CPF");
         System.out.println("2 - Identificador");
+        System.out.println("3 - Voltar\n");
 
         int opcao = Teclado.leInt("Digite uma opção : ");
 
@@ -101,6 +115,7 @@ public class Home {
                 for (int i = 0; i < 5; i++) {
                     if (funcionariosCadastrados[i].getCpf().equals(cpf) && funcionariosCadastrados[i] != null) {
                         System.out.println(funcionariosCadastrados[i]);
+                        break;
                     } else {
                         System.out.println("Nao foi encontrado !!!!!");
                     }
@@ -111,10 +126,14 @@ public class Home {
                 for (int i = 0; i < 5; i++) {
                     if (funcionariosCadastrados[i].getId().equals(id) && funcionariosCadastrados[i] != null) {
                         System.out.println(funcionariosCadastrados[i]);
+                        break;
                     } else {
                         System.out.println("Nao foi encontrado !!!!!");
                     }
                 }
+                break;
+            case 3:
+                menuprincipal();
                 break;
             default:
                 System.out.println("Opção invalida");
@@ -124,17 +143,7 @@ public class Home {
     }
 
     public static void main(String[] args) {
-        switch (menuprincipal()) {
-            case 1:
-                cadastrarFuncionario();
-                break;
-            case 2:
-                buscaFuncionario();
-                break;
-            case 3:
-                System.exit(0);
-        }
-
+        menuprincipal();
     }
 
 }

@@ -1,10 +1,11 @@
 package classes;
 
-public class Funcionario {    
-   private String nome;
-   private String cpf;
-   private double salario;
-   private String id;
+public class Funcionario {
+
+    private String nome;
+    private String cpf;
+    private double salario;
+    private String id;
 
     public String getNome() {
         return nome;
@@ -37,14 +38,14 @@ public class Funcionario {
     public void setId(String id) {
         this.id = id;
     }
-    
-    public void calculaSalario(double salario){       
-        setSalario(salario * 0.10);
+
+    public void calculaSalario(double salario) {
+        setSalario(salario + (salario * 0.10));
     }
 
     @Override
     public String toString() {
         return "Funcionario{" + "nome=" + nome + ", cpf=" + cpf + ", salario=" + salario + ", id=" + id + '}';
     }
-    
+
 }

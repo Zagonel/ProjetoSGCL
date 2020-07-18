@@ -23,13 +23,12 @@ public class Supervisor extends Funcionario {
 
     public void calculaSalario(double salario, double bonus) {
         double aux = salario + bonus;
-        super.calculaSalario(aux); 
+        super.calculaSalario(aux);
     }
 
     @Override
     public String toString() {
-        return "Supervisor{" + "bonus=" + bonus + '}';
+        return "Supervisor{" + "bonus=" + bonus + "nome=" + super.getNome() + ", cpf=" + getCpf() + ", salario=" + getSalario() + ", id=" + getId() + '}';
     }
-    
 
 }
