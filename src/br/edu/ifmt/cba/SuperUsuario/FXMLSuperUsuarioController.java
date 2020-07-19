@@ -45,6 +45,15 @@ public class FXMLSuperUsuarioController implements Initializable {
 
     @FXML
     private Button btn_minimizer;
+    
+    @FXML
+    private Button btn_exibirDados;
+
+    @FXML
+    private Button btn_deletarUsuario;
+
+    @FXML
+    private Button btn_ModificarUsuario;
 
     // abre a tela para cadastros de novos usuários.
     @FXML

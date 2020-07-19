@@ -56,4 +56,21 @@ public class BuscarInfoDAO {
         return usuarios;
     }
 
+    public static void deletaRegistroUsuario(String cpf) {
+        Connection con = DAO.IniciarConexao();
+        PreparedStatement stmt = null;
+        try {
+            stmt = con.prepareStatement("DELETE FROM Cadastro WHERE cpf = ?");
+            stmt.setString(1, cpf);
+            stmt.execute();
+
+        } catch (SQLException ex) {
+            Logger.getLogger(BuscarInfoDAO.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, ex);
+        } finally {
+            DAO.FecharConexao(con, stmt);
+        }
+
+    }
+
 }
