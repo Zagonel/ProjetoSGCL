@@ -40,7 +40,7 @@ public class CheckLoginDAO {
         } catch (SQLException ex) {
             Logger.getLogger(CheckLoginDAO.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
-            DAO.FecharConexao(con, stmt,rs);
+            DAO.FecharConexao(con, stmt, rs);
         }
 
         return check;

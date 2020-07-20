@@ -73,4 +73,38 @@ public class BuscarInfoDAO {
 
     }
 
+    public static usuario buscaDados(String coluna, String dado) {
+
+        Connection con = DAO.IniciarConexao();
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+
+        try {
+            stmt = con.prepareStatement("SELECT *FROM Cadastro WHERE ? = ?");
+            stmt.setString(1, coluna);
+            stmt.setString(2, dado);
+            rs = stmt.executeQuery();
+            usuario userEncontrado = new usuario("");
+            while (rs.next()) {
+                userEncontrado.setUser(rs.getString("usuario"));
+                userEncontrado.setPass(rs.getString("senha"));
+                userEncontrado.setNome(rs.getString("nome"));
+                userEncontrado.setCPF(rs.getString("cpf"));
+                userEncontrado.setAfiliacao(rs.getString("afiliação"));
+                userEncontrado.setDepartamento(rs.getString("departamento"));
+                userEncontrado.setCargo(rs.getString("cargo"));
+                userEncontrado.setCargaHoraria(rs.getInt("carga_horaria"));
+            }
+
+            return userEncontrado;
+
+        } catch (SQLException ex) {
+            Logger.getLogger(BuscarInfoDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            DAO.FecharConexao(con, stmt);
+        }
+
+        return null;
+    }
+
 }

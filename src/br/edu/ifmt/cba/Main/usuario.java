@@ -20,6 +20,26 @@ public class usuario {
     private String Cargo;
     private int cargaHoraria;
 
+    public usuario() {
+    }
+
+    public usuario(String user, String pass, String Nome, String CPF, String Afiliacao, String Departamento, String Cargo, int cargaHoraria) {
+        this.user = user;
+        this.pass = pass;
+        this.Nome = Nome;
+        this.CPF = CPF;
+        this.Afiliacao = Afiliacao;
+        this.Departamento = Departamento;
+        this.Cargo = Cargo;
+        this.cargaHoraria = cargaHoraria;
+    }
+
+    public usuario(String Nome) {
+        this.Nome = Nome;
+    }
+    
+    
+
     public int getCargaHoraria() {
         return cargaHoraria;
     }

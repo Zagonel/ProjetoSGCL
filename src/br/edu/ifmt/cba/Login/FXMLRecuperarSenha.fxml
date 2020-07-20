@@ -30,7 +30,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Label fx:id="erroBusca" layoutX="63.0" layoutY="218.0" textFill="RED">
+      <Label fx:id="erroBusca" layoutX="199.0" layoutY="225.0" textFill="RED">
          <font>
             <Font name="Arial Black" size="14.0" />
          </font>
@@ -55,27 +55,42 @@
             <Font name="Arial Black" size="13.0" />
          </font>
       </Label>
-      <GridPane layoutX="73.0" layoutY="229.0" prefHeight="229.0" prefWidth="255.0">
+      <GridPane layoutX="50.0" layoutY="313.0" prefHeight="130.0" prefWidth="300.0">
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="255.0" minWidth="10.0" prefWidth="119.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="181.0" minWidth="0.0" prefWidth="181.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <TextField fx:id="Email" prefHeight="35.0" prefWidth="200.0" promptText="Email" style="-fx-background-color: #FFDAB9; -fx-border-color: black; -fx-font-weight: bold;">
+            <Label fx:id="labelUsuario" textFill="RED">
                <font>
-                  <Font name="Arial Black" size="13.0" />
+                  <Font name="Times New Roman" size="15.0" />
                </font>
-            </TextField>
-            <TextField fx:id="CPF" prefHeight="35.0" prefWidth="200.0" promptText="CPF" style="-fx-background-color: #FFDAB9; -fx-border-color: black; -fx-font-weight: bold;" GridPane.rowIndex="1">
+            </Label>
+            <Label fx:id="labelSenha" textFill="RED" GridPane.rowIndex="1">
                <font>
-                  <Font name="Arial Black" size="13.0" />
+                  <Font name="Times New Roman" size="15.0" />
                </font>
-            </TextField>
+            </Label>
+            <Label fx:id="loginRecuperado" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Times New Roman Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="senhaRecuperada" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman Bold" size="14.0" />
+               </font>
+            </Label>
          </children>
       </GridPane>
+      <TextField fx:id="CPF" layoutX="75.0" layoutY="268.0" prefHeight="30.0" prefWidth="250.0" promptText="CPF" style="-fx-background-color: #FFDAB9; -fx-border-color: black; -fx-font-weight: bold;">
+         <font>
+            <Font name="Arial Black" size="13.0" />
+         </font>
+      </TextField>
    </children>
 </AnchorPane>
