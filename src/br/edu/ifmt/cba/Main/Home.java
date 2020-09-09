@@ -24,6 +24,7 @@ public class Home extends Application {
         
         Parent root = FXMLLoader.load(getClass().getResource("/br/edu/ifmt/cba/Login/FXMLLogin.fxml"));
         stage.initStyle(StageStyle.UNDECORATED);
+        stage.setResizable(true);
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

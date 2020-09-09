@@ -19,12 +19,12 @@
             <Font name="Arial Black" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="btn_voltar" layoutX="14.0" layoutY="16.0" mnemonicParsing="false" onAction="#voltarPaginaPrincipal" styleClass="button2" text="Voltar">
+      <Button fx:id="btn_voltar" layoutX="15.0" layoutY="18.0" mnemonicParsing="false" onAction="#voltarPaginaPrincipal" prefHeight="26.0" prefWidth="62.0" styleClass="button2" text="Voltar" AnchorPane.bottomAnchor="357.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="724.0" AnchorPane.topAnchor="17.0">
          <font>
             <Font name="Times New Roman Bold" size="13.0" />
          </font>
       </Button>
-      <TableView fx:id="infoTable" layoutX="12.0" layoutY="70.0" prefHeight="200.0" prefWidth="776.0" style="-fx-border-color: black;">
+      <TableView fx:id="infoTable" layoutX="12.0" layoutY="70.0" prefHeight="200.0" prefWidth="776.0" style="-fx-border-color: black;" AnchorPane.bottomAnchor="129.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="70.0">
         <columns>
             <TableColumn fx:id="colunaUser" editable="false" prefWidth="125.0" text="Usuário" />
             <TableColumn fx:id="colunaNome" editable="false" prefWidth="200.0" text="Nome" />
@@ -35,7 +35,7 @@
             <TableColumn fx:id="colunaCargaHoraria" editable="false" prefWidth="100.0" text="Carga horária" />
         </columns>
       </TableView>
-      <ButtonBar buttonOrder="U+L_HE+FBIX_NCYOA_R" layoutX="113.0" layoutY="289.0" prefHeight="97.0" prefWidth="575.0">
+      <ButtonBar buttonOrder="U+L_HE+FBIX_NCYOA_R" layoutX="113.0" layoutY="289.0" prefHeight="97.0" prefWidth="575.0" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="112.0" AnchorPane.rightAnchor="112.0" AnchorPane.topAnchor="289.0">
         <buttons>
             <Button fx:id="btn_exibirDados" mnemonicParsing="false" onAction="#exibirDados" prefHeight="65.0" prefWidth="90.0" styleClass="button2" text="Exibir" translateX="-30.0">
                <font>

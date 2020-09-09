@@ -26,9 +26,9 @@
               <MenuItem mnemonicParsing="false" text="Close" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
+          <Menu mnemonicParsing="false" text="Laboratorios">
             <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
+              <MenuItem fx:id="btn_ReservaLab" mnemonicParsing="false" onAction="#reservaLaboratorio" text="Reservar Laboratorio" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Cadastrar">

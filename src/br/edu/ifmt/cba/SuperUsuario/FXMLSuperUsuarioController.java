@@ -41,11 +41,14 @@ public class FXMLSuperUsuarioController implements Initializable {
     private MenuItem btn_userRegister;
 
     @FXML
+    private MenuItem btn_ReservaLab;
+
+    @FXML
     private Button btn_close;
 
     @FXML
     private Button btn_minimizer;
-    
+
     @FXML
     private Button btn_exibirDados;
 
@@ -84,11 +87,30 @@ public class FXMLSuperUsuarioController implements Initializable {
             Parent root = FXMLLoader.load(getClass().getResource("/br/edu/ifmt/cba/SuperUsuario/BuscaDeUsuario/FXMLBuscaUsuario.fxml"));
             Scene scene = new Scene(root);
             stage.setScene(scene);
-
             stage.show();
+
+            stage.initStyle(StageStyle.DECORATED);
         } catch (IOException ex) {
             Logger.getLogger(FXMLLoginController.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    @FXML
+    void reservaLaboratorio(ActionEvent event) {
+
+        Stage stage = (Stage) menuBar.getScene().getWindow();
+        stage.close();
+
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/br/edu/ifmt/cba/SuperUsuario/ReservarLaboratorio/FXMLReservarLaboratorio.fxml"));
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+            
+        } catch (IOException ex) {
+            Logger.getLogger(FXMLLoginController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
     }
 
     // fecha a tela ao clicar no botão
@@ -106,12 +128,6 @@ public class FXMLSuperUsuarioController implements Initializable {
         stage.setIconified(true);
     }
 
-    /**
-     * Initializes the controller class.
-     *
-     * @param url
-     * @param rb
-     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
