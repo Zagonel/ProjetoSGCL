@@ -19,7 +19,7 @@
             <Font name="Arial Black" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="btn_voltar" layoutX="15.0" layoutY="18.0" mnemonicParsing="false" onAction="#voltarPaginaPrincipal" prefHeight="26.0" prefWidth="62.0" styleClass="button2" text="Voltar" AnchorPane.bottomAnchor="357.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="724.0" AnchorPane.topAnchor="17.0">
+      <Button fx:id="btn_voltar" layoutX="16.0" layoutY="19.0" mnemonicParsing="false" onAction="#voltarPaginaPrincipal" prefHeight="30.0" prefWidth="60.0" styleClass="button2" text="Voltar" AnchorPane.bottomAnchor="352.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="725.0" AnchorPane.topAnchor="18.0">
          <font>
             <Font name="Times New Roman Bold" size="13.0" />
          </font>

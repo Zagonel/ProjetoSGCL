@@ -1,11 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifmt.cba.SuperUsuario.ReservarLaboratorio.FXMLReservarLaboratorioController">
-    
+<AnchorPane id="AnchorPane" maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="400.0" prefHeight="400.0" prefWidth="400.0" stylesheets="@../../StylesheetCSS/EstiloCSS_Geral.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifmt.cba.SuperUsuario.ReservarLaboratorio.FXMLReservarLaboratorioController">
+   <children>
+      <Button fx:id="btn_minimizer" layoutX="316.0" layoutY="14.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#stageMinimizar" prefHeight="30.0" prefWidth="30.0" styleClass="botaoMinimizar" text="—" AnchorPane.bottomAnchor="356.0" AnchorPane.leftAnchor="316.0" AnchorPane.rightAnchor="54.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_close" layoutX="356.0" layoutY="14.0" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#stageClose" prefHeight="30.0" prefWidth="30.0" styleClass="botaoFechar" text="X" AnchorPane.bottomAnchor="356.0" AnchorPane.leftAnchor="356.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="278.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="140.0" styleClass="button2" text="Cadastrar Horarios" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="216.0" layoutY="278.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="140.0" styleClass="button2" text="Horarios Disponiveis" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Button>
+      <GridPane layoutX="22.0" layoutY="71.0" prefHeight="175.0" prefWidth="355.0" AnchorPane.bottomAnchor="154.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="71.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Escolha a data de Inicio">
+               <font>
+                  <Font name="Times New Roman Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label text="Escolha a data de Termino" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label text="CPF do Responsavel" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Times New Roman Bold" size="14.0" />
+               </font>
+            </Label>
+            <DatePicker GridPane.columnIndex="1" />
+            <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField maxHeight="25.0" maxWidth="174.0" minHeight="25.0" minWidth="174.0" prefHeight="25.0" prefWidth="174.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <Button fx:id="btn_voltar" layoutX="22.0" layoutY="14.0" mnemonicParsing="false" onAction="#voltarPaginaPrincipal" prefHeight="30.0" prefWidth="60.0" styleClass="button2" text="Voltar" AnchorPane.bottomAnchor="356.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="318.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Button>
+   </children>
 </AnchorPane>
